@@ -180,12 +180,16 @@
                     </div><!--.tabs-->
                  
                     <div class="tabs-content">
-                      <div id="signup-tab-content" class="active">
+                      <div id="signup-tab-content" class="active" style="color: black;">
                         <form class="signup-form" action="" method="post">
+                          <input type="text" class="input" id="fname" autocomplete="off" placeholder="Firstname">
+                          <input type="text" class="input" id="lname" autocomplete="off" placeholder="Lastname">
                           <input type="email" class="input" id="user_email" autocomplete="off" placeholder="Email">
+                          <input type="password" class="input" id="password" autocomplete="off" placeholder="Password">
                           <input type="text" class="input" id="user_name" autocomplete="off" placeholder="Username">
-                          <input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
-                          <input type="submit" class="button" value="Sign Up">
+                          <input type="phone" class="input" id="phone" autocomplete="off" placeholder="Mobile">
+                          <input type="text" class="input" id="address" autocomplete="off" placeholder="Address">
+                          <div class="button" id="sb-btn" onclick="addlocal()">submit</div>
                         </form><!--.login-form-->
                         <div class="help-text">
                           <p>By signing up, you agree to our</p>
@@ -193,14 +197,11 @@
                         </div><!--.help-text-->
                       </div><!--.signup-tab-content-->
                  
-                      <div id="login-tab-content">
-                        <form class="login-form" action="" method="post">
+                      <div id="login-tab-content" style="color: black;">
+                        <form>
                           <input type="text" class="input" id="user_login" autocomplete="off" placeholder="Email or Username">
-                          <input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
-                          <input type="checkbox" class="checkbox" id="remember_me">
-                          <label for="remember_me">Remember me</label>
-                 
-                          <input type="submit" class="button" value="Login">
+                          <input type="password" class="input" id="user_pass2" autocomplete="off" placeholder="Password">
+                          <div class="button" id="lg-btn" onclick="validate()">submit</div>
                         </form><!--.login-form-->
                         <div class="help-text">
                           <p><a href="#">Forget your password?</a></p>
@@ -213,9 +214,53 @@
         </header>
         <!-- header -->  
 
-        
+      
 
         <!-- js -->
-        <script src = "js/script.js"></script>
+        <script>
+          window.onload=function(){
+            localStorage.setItem("k",1);
+          }
+
+
+          function addlocal(){
+            var fname=document.getElementById("fname").value;
+            var lname=document.getElementById("lname").value;
+            var email=document.getElementById("user_email").value;
+            var username=document.getElementById("user_name").value;
+            var phone=document.getElementById("phone").value;
+            var password=document.getElementById("password").value;
+            var address=document.getElementById("address").value;
+            var obj={
+              fname:fname,
+              lname:lname,
+              email:email,
+              username:username,
+              phone:phone,
+              address:address,
+              password:password
+            }
+            var jobj=JSON.stringify(obj);
+            window.localStorage.setItem(email,jobj);
+            window.localStorage.setItem("k",window.localStorage.getItem(email));
+            window.location.href="index.html";
+          }
+
+          function validate(){
+                    
+            var user=document.getElementById("user_login").value;
+            var password=document.getElementById("user_pass2").value;
+            if(window.localStorage.getItem(user)!==null){
+              window.localStorage.setItem("k",window.localStorage.getItem(user));
+              window.location.href="index.html";
+            }
+            else{
+              alert("Not Registered!plese signup...")
+            }
+          }
+
+
+
+        </script>
     </body>
 </html>

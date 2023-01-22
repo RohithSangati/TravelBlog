@@ -16,6 +16,7 @@
         <link rel = "stylesheet" href = "css/utility.css">
         <link rel = "stylesheet" href = "css/style.css">
         <link rel = "stylesheet" href = "css/responsive.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <!-- navbar  -->
@@ -48,10 +49,18 @@
                         <li class = "nav-item">
                             <a href = "contact.html" class = "nav-link">Contact</a>
                         </li>
-                        <li class = "nav-item">
+                        <li class = "nav-item" id="intro1">
                             <a href = "signup.html" class = "nav-link">Register</a>
                         </li>
+                        <li class = "nav-item intro-tag" id="intro2">
+                            <a href = "profile.html" class = "nav-link" id="introuser">Hello user!</a>
+                        </li> 
+                        <li class = "nav-item intro-tag" id="intro3">
+                            <a href = "index.html"  class="nav-link" id="logout" onclick="logout()">Logout</a>
+                        </li>
+
                     </ul>
+                    
                 </div>
             </div>
         </nav>
@@ -184,6 +193,17 @@
         <!-- end of footer -->
 
         <!-- js -->
+        <script>
+            window.onload=function(){
+                if(window.localStorage.getItem("k")!=null && window.localStorage.getItem("k")!=1){
+                    document.getElementById("intro1").className="nav-item intro-tag";
+                    document.getElementById("intro2").className="nav-item";
+                    document.getElementById("intro3").className="nav-item";
+                    var ans=JSON.parse(window.localStorage.getItem("k"));
+                    document.getElementById("introuser").innerHTML="Hello "+ans.fname+"!";
+                }
+            }
+        </script>
         <script src = "js/script.js"></script>
         <script>
             

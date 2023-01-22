@@ -16,6 +16,7 @@
         <link rel = "stylesheet" href = "css/utility.css">
         <link rel = "stylesheet" href = "css/style.css">
         <link rel = "stylesheet" href = "css/responsive.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <!-- navbar  -->
@@ -48,10 +49,18 @@
                         <li class = "nav-item">
                             <a href = "contact.html" class = "nav-link">Contact</a>
                         </li>
-                        <li class = "nav-item">
+                        <li class = "nav-item" id="intro1">
                             <a href = "signup.html" class = "nav-link">Register</a>
                         </li>
+                        <li class = "nav-item intro-tag" id="intro2">
+                            <a href = "profile.html" class = "nav-link" id="introuser">Hello user!</a>
+                        </li> 
+                        <li class = "nav-item intro-tag" id="intro3">
+                            <a href = "index.html"  class="nav-link" id="logout" onclick="logout()">Logout</a>
+                        </li>
+
                     </ul>
+                    
                 </div>
             </div>
         </nav>
@@ -75,9 +84,9 @@
 
             <div class = "popular-row">
                 <div class = "popular-item shadow">
-                    <img src = "images/popular-1.jpg" alt = "">
+                    <img src = "images/hyd.jpg" alt = "">
                     <div>
-                        <span>Eiffel Tower, Paris</span>
+                        <span>Hyderabad</span>
                         <ul class = "rating flex">
                             <li><i class = "fas fa-star"></i></li>
                             <li><i class = "fas fa-star"></i></li>
@@ -86,14 +95,14 @@
                             <li><i class = "fas fa-star-half-alt"></i></li>
                             <li>&nbsp;400 reviews</li>
                         </ul>
-                        <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quia!</p>
+                        <p class = "text">Hyderabad is the capital of southern India's Telangana state. A major center for the technology industry.</p>
                     </div>
                 </div>
 
                 <div class = "popular-item shadow">
-                    <img src = "images/popular-2.jpg" alt = "">
+                    <img src = "images/tpt.jpg" alt = "">
                     <div>
-                        <span>Machu Picchu, Peru</span>
+                        <span>Tirupati</span>
                         <ul class = "rating flex">
                             <li><i class = "fas fa-star"></i></li>
                             <li><i class = "fas fa-star"></i></li>
@@ -102,14 +111,14 @@
                             <li><i class = "fas fa-star-half-alt"></i></li>
                             <li>&nbsp;400 reviews</li>
                         </ul>
-                        <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quia!</p>
+                        <p class = "text">Tirupati is one of the most visited pilgrimage centre in India, famous for its landmark temples in India.</p>
                     </div>
                 </div>
 
                 <div class = "popular-item shadow">
-                    <img src = "images/popular-3.jpg" alt = "">
+                    <img src = "images/chennai.jpg" alt = "">
                     <div>
-                        <span>Acropolis, Athens</span>
+                        <span>Chennai</span>
                         <ul class = "rating flex">
                             <li><i class = "fas fa-star"></i></li>
                             <li><i class = "fas fa-star"></i></li>
@@ -118,14 +127,14 @@
                             <li><i class = "fas fa-star-half-alt"></i></li>
                             <li>&nbsp;400 reviews</li>
                         </ul>
-                        <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quia!</p>
+                        <p class = "text">jChennai, formerly Madras, city, capital of Tamil Nadu state, southern India, located on cost of the BOB.</p>
                     </div>
                 </div>
 
                 <div class = "popular-item shadow">
-                    <img src = "images/popular-4.jpg" alt = "">
+                    <img src = "images/bangalore.jpg" alt = "">
                     <div>
-                        <span>Bali, Indonesia</span>
+                        <span>Bangalore</span>
                         <ul class = "rating flex">
                             <li><i class = "fas fa-star"></i></li>
                             <li><i class = "fas fa-star"></i></li>
@@ -134,14 +143,14 @@
                             <li><i class = "fas fa-star-half-alt"></i></li>
                             <li>&nbsp;400 reviews</li>
                         </ul>
-                        <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quia!</p>
+                        <p class = "text">Bangalore is the capital of Karnataka located on the Deccan plateau in the south - east part of Karnataka.</p>
                     </div>
                 </div>
 
                 <div class = "popular-item shadow">
-                    <img src = "images/popular-5.jpg" alt = "">
+                    <img src = "images/kolkata.jpg" alt = "">
                     <div>
-                        <span>Dubai, United Arab Emirates</span>
+                        <span>Kolkata</span>
                         <ul class = "rating flex">
                             <li><i class = "fas fa-star"></i></li>
                             <li><i class = "fas fa-star"></i></li>
@@ -150,14 +159,14 @@
                             <li><i class = "fas fa-star-half-alt"></i></li>
                             <li>&nbsp;400 reviews</li>
                         </ul>
-                        <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quia!</p>
+                        <p class = "text">Kolkata (formerly Calcutta) is the capital of India's West Bengal state.It was India's capital under the British Raj.</p>
                     </div>
                 </div>
 
                 <div class = "popular-item shadow">
-                    <img src = "images/popular-6.jpg" alt = "">
+                    <img src = "images/delhi.jpg" alt = "">
                     <div>
-                        <span>Bhutan</span>
+                        <span>Delhi</span>
                         <ul class = "rating flex">
                             <li><i class = "fas fa-star"></i></li>
                             <li><i class = "fas fa-star"></i></li>
@@ -166,14 +175,14 @@
                             <li><i class = "fas fa-star-half-alt"></i></li>
                             <li>&nbsp;400 reviews</li>
                         </ul>
-                        <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quia!</p>
+                        <p class = "text">New Delhi is India's capital and is one of the most widely known cities of the country as well as world.</p>
                     </div>
                 </div>
 
                 <div class = "popular-item shadow">
-                    <img src = "images/popular-7.jpg" alt = "">
+                    <img src = "images/lucknow.jpg" alt = "">
                     <div>
-                        <span>Havana, Cuba</span>
+                        <span>Lucknow</span>
                         <ul class = "rating flex">
                             <li><i class = "fas fa-star"></i></li>
                             <li><i class = "fas fa-star"></i></li>
@@ -182,14 +191,14 @@
                             <li><i class = "fas fa-star-half-alt"></i></li>
                             <li>&nbsp;400 reviews</li>
                         </ul>
-                        <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quia!</p>
+                        <p class = "text">Lucknow, a large city in northern part of the India, is the capital of the state of Uttar Pradesh.</p>
                     </div>
                 </div>
 
                 <div class = "popular-item shadow">
-                    <img src = "images/popular-8.jpg" alt = "">
+                    <img src = "images/mumbai.jpg" alt = "">
                     <div>
-                        <span>Moskva, Russia</span>
+                        <span>Mumbai</span>
                         <ul class = "rating flex">
                             <li><i class = "fas fa-star"></i></li>
                             <li><i class = "fas fa-star"></i></li>
@@ -198,7 +207,7 @@
                             <li><i class = "fas fa-star-half-alt"></i></li>
                             <li>&nbsp;400 reviews</li>
                         </ul>
-                        <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quia!</p>
+                        <p class = "text">Mumbai is a mix of iconic old-world charm architecture, strikingly modern high rises, cultures and traditions.</p>
                     </div>
                 </div>
             </div>
@@ -269,7 +278,17 @@
         </footer>
         
 
-
+        <script>
+            window.onload=function(){
+                if(window.localStorage.getItem("k")!=null && window.localStorage.getItem("k")!=1){
+                    document.getElementById("intro1").className="nav-item intro-tag";
+                    document.getElementById("intro2").className="nav-item";
+                    document.getElementById("intro3").className="nav-item";
+                    var ans=JSON.parse(window.localStorage.getItem("k"));
+                    document.getElementById("introuser").innerHTML="Hello "+ans.fname+"!";
+                }
+            }
+        </script>
 
         <script src = "js/script.js"></script>
         <script>

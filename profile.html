@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+        <!-- navbar  -->
         <nav class = "navbar">
             <div class = "container flex">
                 <a href = "index.html" class = "site-brand">
@@ -69,23 +70,33 @@
         <header class = "flex header-sm">
             <div class = "container">
                 <div class = "header-title">
-                    <h1>About</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus rerum maxime enim odit illum in molestias beatae doloremque, ratione optio.</p>
+                    <h1>Your profile</h1>
+                    <div class="d-flex">
+                        <h2>Firstname:</h2>
+                        <h2 id="fname"></h2>
+                    </div>
+                    <div>
+                        <h2>Lastname:</h2>
+                        <h2 id="lname"></h2>
+                    </div>
+                    <div>
+                        <h2>Mobile:</h2>
+                        <h2 id="phone"></h2>
+                    </div>
+                    <div>
+                        <h2>Email:</h2>
+                        <h2 id="email"></h2>
+                    </div>
+                    <div>
+                        <h2>Address:</h2>
+                        <h2 id="address"></h2>
+                    </div>
+                    
                 </div>
             </div>
         </header>
         <!-- header -->
-
-        <div class="container-fluid d-flex justify-content-around" id="About-body">
-            <div class="about-me">
-                <h1>YouTube</h1>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/IgAnj6r1O48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="about-me">
-                <h1>Address</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.250452250042!2d78.37351921450598!3d17.447722788042473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91449d140b2b%3A0xfc3a4f97e4236622!2sDarwinbox!5e0!3m2!1sen!2sin!4v1674060205679!5m2!1sen!2sin" width="560" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
+        
         
 
         <!-- footer -->
@@ -149,11 +160,20 @@
                 </div>
             </div>
         </footer>
-        <!-- end of footer -->
+        
 
-        <!-- js -->
+       
+
+        <script src = "js/script.js"></script>
         <script>
             window.onload=function(){
+                var obj=window.localStorage.getItem("k");
+                var res=JSON.parse(obj);
+                document.getElementById("fname").innerHTML=res.fname;
+                document.getElementById("lname").innerHTML=res.lname;
+                document.getElementById("phone").innerHTML=res.phone;
+                document.getElementById("email").innerHTML=res.email;
+                document.getElementById("address").innerHTML=res.address;
                 if(window.localStorage.getItem("k")!=null && window.localStorage.getItem("k")!=1){
                     document.getElementById("intro1").className="nav-item intro-tag";
                     document.getElementById("intro2").className="nav-item";
@@ -163,7 +183,5 @@
                 }
             }
         </script>
-        <script src = "js/script.js"></script>
-        
     </body>
 </html>
