@@ -80,60 +80,55 @@
         <div id = "gallery" class = "py-4">
             <div class = "container">
                 <div class = "gallery-row">
-                    <div class = "gallery-item shadow">
-                        <img src = "images/gallery-1.jpg" alt = "gallery img">
-                        <span class = "zoom-icon">
-                            <i class = "fas fa-search-plus"></i>
-                        </span>
-                    </div>
-                    <div class = "gallery-item shadow">
-                        <img src = "images/gallery-2.jpg" alt = "gallery img">
-                        <span class = "zoom-icon">
-                            <i class = "fas fa-search-plus"></i>
-                        </span>
-                    </div>
-                    <div class = "gallery-item shadow">
-                        <img src = "images/gallery-3.jpg" alt = "gallery img">
-                        <span class = "zoom-icon">
-                            <i class = "fas fa-search-plus"></i>
-                        </span>
-                    </div>
-                    <div class = "gallery-item shadow">
-                        <img src = "images/gallery-4.jpg" alt = "gallery img">
-                        <span class = "zoom-icon">
-                            <i class = "fas fa-search-plus"></i>
-                        </span>
-                    </div>
-                    <div class = "gallery-item shadow">
-                        <img src = "images/gallery-5.jpg" alt = "gallery img">
-                        <span class = "zoom-icon">
-                            <i class = "fas fa-search-plus"></i>
-                        </span>
-                    </div>
-                    <div class = "gallery-item shadow">
-                        <img src = "images/gallery-6.jpg" alt = "gallery img">
-                        <span class = "zoom-icon">
-                            <i class = "fas fa-search-plus"></i>
-                        </span>
-                    </div>
-                    <div class = "gallery-item shadow">
-                        <img src = "images/gallery-7.jpg" alt = "gallery img">
-                        <span class = "zoom-icon">
-                            <i class = "fas fa-search-plus"></i>
-                        </span>
-                    </div>
-                    <div class = "gallery-item shadow">
-                        <img src = "images/gallery-8.jpg" alt = "gallery img">
-                        <span class = "zoom-icon">
-                            <i class = "fas fa-search-plus"></i>
-                        </span>
-                    </div>
-                    <div class = "gallery-item shadow">
-                        <img src = "images/gallery-9.jpg" alt = "gallery img">
-                        <span class = "zoom-icon">
-                            <i class = "fas fa-search-plus"></i>
-                        </span>
-                    </div>
+                    <a href="enquiry.html" class = "gallery-item shadow">
+                        <div  onclick="updateServiceIndex(0)">
+                            <img src = "images/gallery-1.jpg" alt = "gallery img">
+                            <span class = "zoom-icon">
+                                <i class = "fas fa-link"></i>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="enquiry.html" class = "gallery-item shadow">
+                        <div  onclick="updateServiceIndex(1)">
+                            <img src = "images/gallery-3.jpg" alt = "gallery img">
+                            <span class = "zoom-icon">
+                                <i class = "fas fa-link"></i>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="enquiry.html" class = "gallery-item shadow">
+                        <div  onclick="updateServiceIndex(2)">
+                            <img src = "images/gallery-5.jpg" alt = "gallery img">
+                            <span class = "zoom-icon">
+                                <i class = "fas fa-link"></i>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="enquiry.html" class = "gallery-item shadow">
+                        <div  onclick="updateServiceIndex(3)">
+                            <img src = "images/gallery-7.jpg" alt = "gallery img">
+                            <span class = "zoom-icon">
+                                <i class = "fas fa-link"></i>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="enquiry.html" class = "gallery-item shadow">
+                        <div  onclick="updateServiceIndex(4)">
+                            <img src = "images/gallery-9.jpg" alt = "gallery img">
+                            <span class = "zoom-icon">
+                                <i class = "fas fa-link"></i>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="enquiry.html" class = "gallery-item shadow">
+                        <div  onclick="updateServiceIndex(5)">
+                            <img src = "images/gallery-11.jpg" alt = "gallery img">
+                            <span class = "zoom-icon">
+                                <i class = "fas fa-link"></i>
+                            </span>
+                        </div>
+                    </a>
+                    
                 </div>
             </div>
         </div>
@@ -164,7 +159,7 @@
                     <a href = "index.html" class = "site-brand">
                         Trip<span>Boss</span>
                     </a>
-                    <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates maiores nam vitae iusto. Placeat rem sint voluptas natus exercitationem autem quod neque, odit laudantium reiciendis ipsa suscipit veritatis voluptate.</p>
+                    <p class = "text">TripBoss help people plan, choose and arrange their holiday. TripBoss will usually work to a budget set out by whoever is planning the holiday. TripBoss also offer advice and opinions on where to go and local tourist attractions, events and customs.</p>
                 </div>
 
                 <div class = "footer-item">
@@ -201,11 +196,11 @@
                 <div class = "footer-item">
                     <h2>Popular Places:</h2>
                     <ul>
-                        <li><a href = "#">Thailand</a></li>
-                        <li><a href = "#">Australia</a></li>
-                        <li><a href = "#">Maldives</a></li>
-                        <li><a href = "#">Switzerland</a></li>
-                        <li><a href = "#">Germany</a></li>
+                        <li><a href = "#">Hyderabad</a></li>
+                        <li><a href = "#">Mumbai</a></li>
+                        <li><a href = "#">Tirupati</a></li>
+                        <li><a href = "#">Bangalore</a></li>
+                        <li><a href = "#">Lucknow</a></li>
                     </ul>
                 </div>
 
@@ -230,7 +225,51 @@
                     var ans=JSON.parse(window.localStorage.getItem("k"));
                     document.getElementById("introuser").innerHTML="Hello "+ans.fname+"!";
                 }
+                var servicesarr={
+                    1:{
+                        img:"images/gallery-1.jpg",
+                        name:"Photography",
+                        subject:"Abotu photography"
+                    },
+                    2:{
+                        img:"images/gallery-3.jpg",
+                        name:"Vediography",
+                        subject:"About Vediography"
+                    },
+                    3:{
+                        img:"images/gallery-5.jpg",
+                        name:"Lodging",
+                        subject:"About Lodging"
+                    },
+                    4:{
+                        img:"images/gallery-7.jpg",
+                        name:"Transportation",
+                        subject:"About Transportation"
+                    },
+                    5:{
+                        img:"images/gallery-9.jpg",
+                        name:"Food",
+                        subject:"About Food"
+                    },
+                    6:{
+                        img:"images/gallery-11.jpg",
+                        name:"Shipping",
+                        subject:"About Shipping"
+                    },
+                }
+                window.localStorage.setItem("servicesinfo",JSON.stringify(servicesarr));
             }
+            function logout(){
+                window.localStorage.setItem("k",1);
+                document.getElementById("intro1").className="nav-item";
+                document.getElementById("intro2").className="nav-item intro-tag";
+                document.getElementById("intro3").className="nav-item intro-tag";
+            }
+
+            function updateServiceIndex(i){
+                window.localStorage.setItem("serviceindex",i);
+            }
+
         </script>
         <script src = "js/script.js"></script>
         <script>
@@ -242,31 +281,31 @@
             const prevBtn = document.getElementById('prev-btn');
             let imgIndex = 0;
 
-            allGalleryItem.forEach((galleryItem) => {
-                galleryItem.addEventListener('click', () => {
-                    imgModalDiv.style.display = "block";
-                    let imgSrc = galleryItem.querySelector('img').src;
-                    imgIndex = parseInt(imgSrc.split("-")[1].substring(0, 1));
-                    showImageContent(imgIndex);
-                })
-            });
+            // allGalleryItem.forEach((galleryItem) => {
+            //     galleryItem.addEventListener('click', () => {
+            //         imgModalDiv.style.display = "block";
+            //         let imgSrc = galleryItem.querySelector('img').src;
+            //         imgIndex = parseInt(imgSrc.split("-")[1].substring(0, 1));
+                   
+            //     })
+            // });
 
             // next click
             nextBtn.addEventListener('click', () => {
+                showImageContent(imgIndex);
                 imgIndex++;
-                if(imgIndex > allGalleryItem.length){
+                if(imgIndex > 12){
                     imgIndex = 1;
                 }
-                showImageContent(imgIndex);
             });
 
             // previous click
-            prevBtn.addEventListener('click', () => {
+            prevBtn.addEventListener('click', () => {                
+                showImageContent(imgIndex);
                 imgIndex--;
                 if(imgIndex <= 0){
                     imgIndex = allGalleryItem.length;
                 }
-                showImageContent(imgIndex);
             });
 
             function showImageContent(index){

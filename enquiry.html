@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+
+
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +21,11 @@
         <link rel = "stylesheet" href = "css/responsive.css">
         <link rel="stylesheet" href="css/styles.css">
     </head>
+
+
+
     <body>
+        <!-- navbar  -->
         <nav class = "navbar">
             <div class = "container flex">
                 <a href = "index.html" class = "site-brand">
@@ -69,22 +76,38 @@
         <header class = "flex header-sm">
             <div class = "container">
                 <div class = "header-title">
-                    <h1>About</h1>
-                    <p style="font-style: italic;">TripBoss help people plan, choose and arrange their holiday.TripBoss also offer advice and opinions on where to go and local tourist attractions, events and customs.</p>
+                    <h1>Enquiry</h1>
                 </div>
             </div>
         </header>
-        <div style="display: flex;flex-direction: row;justify-content: space-around;align-items: center;flex-wrap: wrap;" id="About-body">
-            <div class="about-me" style="display: flex;flex-direction: column;align-items: center;">
-                <h1>YouTube</h1>
-                <iframe width="150%" height="315" src="https://www.youtube.com/embed/IgAnj6r1O48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="about-me" style="display: flex;flex-direction: column;align-items: center;">
-                <h1>Address</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.250452250042!2d78.37351921450598!3d17.447722788042473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91449d140b2b%3A0xfc3a4f97e4236622!2sDarwinbox!5e0!3m2!1sen!2sin!4v1674060205679!5m2!1sen!2sin" width="150%" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
         <!-- header -->
+
+        <!-- contact section -->
+        <section id = "contact" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">get in touch with us</span>
+                    <h2 class = "lg-title">contact us</h2>
+                </div>
+
+                <div class = "contact-row">
+                    <div class = "contact-left">
+                        <form class = "contact-form">
+                            <input type = "text" class = "form-control" placeholder="Your name">
+                            <input type = "email" class = "form-control" placeholder="Your email">
+                            <textarea rows = "4" class = "form-control" placeholder="Your message" style = "resize: none;"></textarea>
+                            <input type = "submit" class = "btn" value = "Send message">
+                        </form>
+                    </div>
+                    <div class = "contact-right my-2" id="service-item">
+                        <img src="" id="service-img">
+                        <h1 id="service-heading"></h1>
+                        <p id="service-about"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of contact section -->
         
 
         <!-- footer -->
@@ -160,6 +183,12 @@
                     var ans=JSON.parse(window.localStorage.getItem("k"));
                     document.getElementById("introuser").innerHTML="Hello "+ans.fname+"!";
                 }
+                var info=JSON.parse(localStorage.getItem("servicesinfo"));
+                var index=JSON.parse(window.localStorage.getItem("serviceindex"));
+                alert(index);
+                document.getElementById("service-img").src=info[index+1].img;
+                document.getElementById("service-heading").innerHTML=info[index+1].name;
+                document.getElementById("service-about").innerHTML=info[index+1].subject;
             }
             function logout(){
                 window.localStorage.setItem("k",1);
@@ -167,9 +196,10 @@
                 document.getElementById("intro2").className="nav-item intro-tag";
                 document.getElementById("intro3").className="nav-item intro-tag";
             }
-
         </script>
         <script src = "js/script.js"></script>
-        
+        <script>
+            
+        </script>
     </body>
 </html>

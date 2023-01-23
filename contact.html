@@ -38,10 +38,10 @@
                             <a href = "index.html" class = "nav-link">Home</a>
                         </li>
                         <li class = "nav-item">
-                            <a href = "gallery.html" class = "nav-link">Gallery</a>
+                            <a href = "gallery.html" class = "nav-link">Services</a>
                         </li>
                         <li class = "nav-item">
-                            <a href = "blog.html" class = "nav-link">Blog</a>
+                            <a href = "blog.html" class = "nav-link">Where To Go</a>
                         </li>
                         <li class = "nav-item">
                             <a href = "about.html" class = "nav-link">About</a>
@@ -71,7 +71,6 @@
             <div class = "container">
                 <div class = "header-title">
                     <h1>Contact</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus rerum maxime enim odit illum in molestias beatae doloremque, ratione optio.</p>
                 </div>
             </div>
         </header>
@@ -136,7 +135,7 @@
                     <a href = "index.html" class = "site-brand">
                         Trip<span>Boss</span>
                     </a>
-                    <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates maiores nam vitae iusto. Placeat rem sint voluptas natus exercitationem autem quod neque, odit laudantium reiciendis ipsa suscipit veritatis voluptate.</p>
+                    <p class = "text">TripBoss help people plan, choose and arrange their holiday. TripBoss will usually work to a budget set out by whoever is planning the holiday. TripBoss also offer advice and opinions on where to go and local tourist attractions, events and customs.</p>
                 </div>
 
                 <div class = "footer-item">
@@ -173,11 +172,11 @@
                 <div class = "footer-item">
                     <h2>Popular Places:</h2>
                     <ul>
-                        <li><a href = "#">Thailand</a></li>
-                        <li><a href = "#">Australia</a></li>
-                        <li><a href = "#">Maldives</a></li>
-                        <li><a href = "#">Switzerland</a></li>
-                        <li><a href = "#">Germany</a></li>
+                        <li><a href = "#">Hyderabad</a></li>
+                        <li><a href = "#">Mumbai</a></li>
+                        <li><a href = "#">Tirupati</a></li>
+                        <li><a href = "#">Bangalore</a></li>
+                        <li><a href = "#">Lucknow</a></li>
                     </ul>
                 </div>
 
@@ -202,6 +201,12 @@
                     var ans=JSON.parse(window.localStorage.getItem("k"));
                     document.getElementById("introuser").innerHTML="Hello "+ans.fname+"!";
                 }
+            }
+            function logout(){
+                window.localStorage.setItem("k",1);
+                document.getElementById("intro1").className="nav-item";
+                document.getElementById("intro2").className="nav-item intro-tag";
+                document.getElementById("intro3").className="nav-item intro-tag";
             }
         </script>
         <script src = "js/script.js"></script>

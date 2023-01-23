@@ -16,7 +16,17 @@
         <link rel = "stylesheet" href = "css/utility.css">
         <link rel = "stylesheet" href = "css/style.css">
         <link rel = "stylesheet" href = "css/responsive.css">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles.css"><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <style>
+            
+            .admin-button{
+                border: 2px soild green;
+
+            }
+        </style>
+
+    
     </head>
     
     <body>
@@ -67,48 +77,16 @@
         <!-- end of navbar  -->
 
         <!-- header -->
-        <header class = "flex">
-            <div class = "container">
-                <div class = "header-title">
-                    <h1>Welcome to TripBoss</h1>
-                    <p>Come with us and visit new places in the world....</p>
-                    <a href="https://youtu.be/IgAnj6r1O48" target="_blank" id="watchmore">Watchmore</a>
-                    
-                </div>
+        <header >
+            <div class="admin" style="display: flex;flex-direction:row;justify-content:space-evenly;align-items:center;flex-wrap: wrap;">
+                <div class="admin-button" style="background-color: white;padding:50px 20px 50px 20px;color: black;width:15%;;text-align: center;font-size:30px;border-radius: 20px;font-weight: bold;;">Users</div>
+                <div class="admin-button" style="background-color: white;padding:50px 20px 50px 20px;color: black;width:15%;;text-align: center;font-size:30px;border-radius: 20px;font-weight: bold;;">Add Places</div>
+                <div class="admin-button" style="background-color: white;padding:50px 20px 50px 20px;color: black;width:15%;;text-align: center;font-size:30px;border-radius: 20px;font-weight: bold;;">Queries</div>
             </div>
         </header>
-        <!-- header -->
 
-        <script>
-            window.onload=function(){
-                if(window.localStorage.getItem("k")!=null && window.localStorage.getItem("k")!=1){
-                    document.getElementById("intro1").className="nav-item intro-tag";
-                    document.getElementById("intro2").className="nav-item";
-                    document.getElementById("intro3").className="nav-item";
-                    var ans=JSON.parse(window.localStorage.getItem("k"));
-                    document.getElementById("introuser").innerHTML="Hello "+ans.fname+"!";
-                }
-
-            }
-        </script>
-
-        <script>
-            // play/pause video
-            let video = document.querySelector('.video-wrapper video');
-            document.getElementById('play-btn').addEventListener('click', () => {
-                if(video.paused){
-                    video.play();
-                } else {
-                    video.pause();
-                }
-            });
-            function logout(){
-                window.localStorage.setItem("k",1);
-                document.getElementById("intro1").className="nav-item";
-                document.getElementById("intro2").className="nav-item intro-tag";
-                document.getElementById("intro3").className="nav-item intro-tag";
-            }
-        </script>
+        
+        
         <script src = "js/script.js"></script>
         <script src = "js/index.js">
         </script>

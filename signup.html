@@ -68,6 +68,7 @@
                     .form-wrap .tabs h3 a.active {
                     background-color: #fff; }
             .form-wrap .tabs-content {
+              
                 padding: 1.5em; }
                 .form-wrap .tabs-content div[id$="tab-content"] {
                 display: none; }
@@ -139,6 +140,7 @@
                 .form-wrap .help-text p {
                 text-align: center;
                 font-size: 14px; }
+            
             </style>
             <script>
                     jQuery(document).ready(function($) {
@@ -154,18 +156,18 @@
                         $(tab_content).addClass('active');
                 });
             });
-         
+          
             </script>
     </head>
     <body>
         <!-- navbar  -->
         <nav class = "navbar">
-            <div class = "container flex">
-                <a href = "index.html" class = "site-brand">
-                    Trip<span>Boss</span>
-                </a>
-            </div>
-        </nav>
+          <div class = "container flex">
+              <a href = "index.html" class = "site-brand" onMouseOver="this.style.color='white'">
+                  Trip<span>Boss</span>
+              </a>
+          </div>
+      </nav>
         
         
 
@@ -184,11 +186,11 @@
                         <form class="signup-form" action="" method="post">
                           <input type="text" class="input" id="fname" autocomplete="off" placeholder="Firstname">
                           <input type="text" class="input" id="lname" autocomplete="off" placeholder="Lastname">
-                          <input type="email" class="input" id="user_email" autocomplete="off" placeholder="Email">
-                          <input type="password" class="input" id="password" autocomplete="off" placeholder="Password">
                           <input type="text" class="input" id="user_name" autocomplete="off" placeholder="Username">
                           <input type="phone" class="input" id="phone" autocomplete="off" placeholder="Mobile">
                           <input type="text" class="input" id="address" autocomplete="off" placeholder="Address">
+                          <input type="email" class="input" id="user_email" autocomplete="off" placeholder="Email">
+                          <input type="password" class="input" id="password" autocomplete="off" placeholder="Password">
                           <div class="button" id="sb-btn" onclick="addlocal()">submit</div>
                         </form><!--.login-form-->
                         <div class="help-text">
@@ -231,6 +233,10 @@
             var phone=document.getElementById("phone").value;
             var password=document.getElementById("password").value;
             var address=document.getElementById("address").value;
+            if(window.localStorage.getItem(email)!==null){
+              alert("User already exits");
+              return;
+            }
             var obj={
               fname:fname,
               lname:lname,
@@ -251,8 +257,14 @@
             var user=document.getElementById("user_login").value;
             var password=document.getElementById("user_pass2").value;
             if(window.localStorage.getItem(user)!==null){
-              window.localStorage.setItem("k",window.localStorage.getItem(user));
-              window.location.href="index.html";
+              var obj=JSON.parse(window.localStorage.getItem(user));
+              if(obj.password===password){
+                window.localStorage.setItem("k",window.localStorage.getItem(user));
+                window.location.href="index.html";
+              }
+              else{
+                alert("Invalid password");
+              }
             }
             else{
               alert("Not Registered!plese signup...")
