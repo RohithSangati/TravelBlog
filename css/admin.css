@@ -1,4 +1,4 @@
-table{
+/* table{
     text-align: center;
     font-weight:600;
     font-size: 25px;
@@ -26,4 +26,23 @@ input{
     border-radius: 20px;
     height: 30px;
     width: 130%;
-}     
+}      */
+
+table,tr,td,th{
+    background-color: rgb(187, 198, 214);
+    color: white;
+    border: 2px solid white;
+    border-collapse: collapse;
+}
+td{
+    padding: 5px;
+    font-size: large;
+    font-style: italic;
+}
+input{
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: 2px solid black;
+    width: 150%;
+}
