@@ -1,0 +1,22 @@
+table{
+    text-align: center;
+    font-weight:600;
+    font-size: 25px;
+    margin-bottom: 25%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 60%;
+    margin: auto;
+
+}
+table td{
+    width:100%;
+    word-wrap: break-word;
+}
+table,tr,td{
+    border: 2px solid white;
+    border-collapse: collapse;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: left;
+}
