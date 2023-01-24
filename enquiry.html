@@ -87,20 +87,20 @@
             <div class = "container">
                 <div class = "title-wrap">
                     <span class = "sm-title">get in touch with us</span>
-                    <h2 class = "lg-title">contact us</h2>
+                    <h2 class = "lg-title">Enquiry Form</h2>
                 </div>
 
                 <div class = "contact-row">
                     <div class = "contact-left">
                         <form class = "contact-form">
-                            <input type = "text" class = "form-control" placeholder="Your name">
-                            <input type = "email" class = "form-control" placeholder="Your email">
-                            <textarea rows = "4" class = "form-control" placeholder="Your message" style = "resize: none;"></textarea>
-                            <input type = "submit" class = "btn" value = "Send message">
+                            <input type = "text" class = "form-control" placeholder="Your name" id="enq-name">
+                            <input type = "email" class = "form-control" placeholder="Your email" id="enq-email">
+                            <textarea rows = "4" class = "form-control" placeholder="Your Query" style = "resize: none;" id="enq-subject"></textarea>
+                            <input type = "submit" style="cursor: pointer;" class = "btn" value = "Send Query" onclick="sendToAdmin()">
                         </form>
                     </div>
                     <div class = "contact-right my-2" id="service-item">
-                        <img src="" id="service-img">
+                        <img src="" height="300px" width="auto" id="service-img">
                         <h1 id="service-heading"></h1>
                         <p id="service-about"></p>
                     </div>
@@ -174,32 +174,8 @@
         <!-- end of footer -->
 
         <!-- js -->
-        <script>
-            window.onload=function(){
-                if(window.localStorage.getItem("k")!=null && window.localStorage.getItem("k")!=1){
-                    document.getElementById("intro1").className="nav-item intro-tag";
-                    document.getElementById("intro2").className="nav-item";
-                    document.getElementById("intro3").className="nav-item";
-                    var ans=JSON.parse(window.localStorage.getItem("k"));
-                    document.getElementById("introuser").innerHTML="Hello "+ans.fname+"!";
-                }
-                var info=JSON.parse(localStorage.getItem("servicesinfo"));
-                var index=JSON.parse(window.localStorage.getItem("serviceindex"));
-                alert(index);
-                document.getElementById("service-img").src=info[index+1].img;
-                document.getElementById("service-heading").innerHTML=info[index+1].name;
-                document.getElementById("service-about").innerHTML=info[index+1].subject;
-            }
-            function logout(){
-                window.localStorage.setItem("k",1);
-                document.getElementById("intro1").className="nav-item";
-                document.getElementById("intro2").className="nav-item intro-tag";
-                document.getElementById("intro3").className="nav-item intro-tag";
-            }
-        </script>
+        <script src="js/enquiry.js"></script>
         <script src = "js/script.js"></script>
-        <script>
-            
-        </script>
+
     </body>
 </html>

@@ -55,6 +55,7 @@
                         <li class = "nav-item intro-tag" id="intro2">
                             <a href = "profile.html" class = "nav-link" id="introuser">Hello user!</a>
                         </li> 
+                        
                         <li class = "nav-item intro-tag" id="intro3">
                             <a href = "index.html"  class="nav-link" id="logout" onclick="logout()">Logout</a>
                         </li>
@@ -83,7 +84,7 @@
             </div>
 
             
-            <div class = "popular-row">
+            <div class = "popular-row" id="placeCards">
 
                 <a target="_blank" href="https://en.wikipedia.org/wiki/Hyderabad#:~:text=It%20is%20situated%20in%20the,largest%20metropolitan%20areas%20in%20India.">
                     <div class = "popular-item shadow">
@@ -297,30 +298,8 @@
                 </div>
             </div>
         </footer>
-        
-
-        <script>
-            window.onload=function(){
-                if(window.localStorage.getItem("k")!=null && window.localStorage.getItem("k")!=1){
-                    document.getElementById("intro1").className="nav-item intro-tag";
-                    document.getElementById("intro2").className="nav-item";
-                    document.getElementById("intro3").className="nav-item";
-                    var ans=JSON.parse(window.localStorage.getItem("k"));
-                    document.getElementById("introuser").innerHTML="Hello "+ans.fname+"!";
-                }
-            }
-            function logout(){
-                window.localStorage.setItem("k",1);
-                document.getElementById("intro1").className="nav-item";
-                document.getElementById("intro2").className="nav-item intro-tag";
-                document.getElementById("intro3").className="nav-item intro-tag";
-            }
-
-        </script>
 
         <script src = "js/script.js"></script>
-        <script>
-            
-        </script>
+        <script src="js/blog.js"></script>
     </body>
 </html>

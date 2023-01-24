@@ -54,6 +54,7 @@
                         <li class = "nav-item intro-tag" id="intro2">
                             <a href = "profile.html" class = "nav-link" id="introuser">Hello user!</a>
                         </li> 
+                        
                         <li class = "nav-item intro-tag" id="intro3">
                             <a href = "index.html"  class="nav-link" id="logout" onclick="logout()">Logout</a>
                         </li>
@@ -150,25 +151,8 @@
         </footer>
         <!-- end of footer -->
 
-        <!-- js -->
-        <script>
-            window.onload=function(){
-                if(window.localStorage.getItem("k")!=null && window.localStorage.getItem("k")!=1){
-                    document.getElementById("intro1").className="nav-item intro-tag";
-                    document.getElementById("intro2").className="nav-item";
-                    document.getElementById("intro3").className="nav-item";
-                    var ans=JSON.parse(window.localStorage.getItem("k"));
-                    document.getElementById("introuser").innerHTML="Hello "+ans.fname+"!";
-                }
-            }
-            function logout(){
-                window.localStorage.setItem("k",1);
-                document.getElementById("intro1").className="nav-item";
-                document.getElementById("intro2").className="nav-item intro-tag";
-                document.getElementById("intro3").className="nav-item intro-tag";
-            }
-
-        </script>
+        
+        <script src="js/about.js"></script>
         <script src = "js/script.js"></script>
         
     </body>
