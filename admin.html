@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>TripBoss</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -37,7 +37,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">TripBoss</span>
+        <span class="d-none d-lg-block">TripBossAdmin</span>
       </a>
     </div>
 
@@ -73,8 +73,8 @@
       <div class="row">
 
         <!-- Left side columns -->
-        <div class="col-lg-8">
-          <div class="row">
+        <div class="col-lg-12">
+          <div class="row" >
 
             <!-- Sales Card -->
             <div class="col-xxl-4 col-md-6" id="users-btn" onclick="displayUsers()" style="cursor: pointer;">
@@ -98,11 +98,11 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-cart"></i>
+                      <i class="bi bi-people"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>145</h6>
-                      <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                      <h6 id="countOfusers">0</h6>
+                      <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">Users</span>
 
                     </div>
                   </div>
@@ -133,12 +133,11 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-currency-dollar"></i>
+                      <i class="bi bi-globe"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>$3,264</h6>
-                      <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
+                      <h6 id="countOfPlaces">8</h6>
+                      <span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">Places</span>
                     </div>
                   </div>
                 </div>
@@ -169,11 +168,11 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-people"></i>
+                      <i class="bi bi-question-circle"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>1244</h6>
-                      <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
+                      <h6 id="countOfQuiries">0</h6>
+                      <span class="text-danger small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1">Enquiries</span>
 
                     </div>
                   </div>
@@ -195,7 +194,7 @@
 
                   <table class="table table-borderless datatable" id="userdata">
                     
-                      <tr>
+                      <tr style="background-color: rgb(205, 201, 201);">
                         <th scope="col">Id </th>
                         <th scope="col">Email</th>
                         <th scope="col">First Name</th>
@@ -231,7 +230,7 @@
 
                   <table class="table table-borderless datatable" id="enquiries"  style="display:none">
                     
-                      <tr>
+                      <tr style="background-color: rgb(205, 201, 201);">
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Subject</th>
@@ -245,7 +244,7 @@
 
 
                 <div class="card-body" id="addPlaceData" style="display: none;">
-                  <div style="display: flex;flex-direction:column;align-items:center;justify-content: center;width: 30%;margin: auto;border: 2px solid white;border-radius: 20px;">
+                  <div style="display: flex;flex-direction:column;align-items:center;justify-content: center;width:45%;margin: auto;border: 2px solid white;border-radius: 20px;background-color: rgb(205, 201, 201);;padding:40px;">
         
                       <div style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
                           <input type="text" id="addCardImUrl" placeholder="Image url" required><br>
@@ -269,14 +268,14 @@
     </section>
 
   </main>
-  <aside id="sidebar" class="sidebar">
+  <aside id="sidebar" class="sidebar" style="color: black;">
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <div class="pagetitle">
-        <h1>Dashboard</h1>
+        <h1  style="color: black;">Dashboard</h1>
         <nav>
-          <ol class="breadcrumb">
+          <ol class="breadcrumb"  style="color: black;">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item active">Dashboard</li>
           </ol>
@@ -284,27 +283,27 @@
       </div>
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
-          <i class="bi bi-grid"></i>
-          <span>Home</span>
+        <a class="nav-link " href="index.html" style="color: black;">
+          <i class="bi bi-grid" style="color: black;"></i>
+          <span >Home</span>
         </a>
       </li><!-- End Dashboard Nav -->
-      <li class="nav-item">
-        <a class="nav-link "onclick="displayUsers()"">
-          <i class="bi bi-grid"></i>
-          <span>Users List</span>
+      <li class="nav-item" style="cursor: pointer;color: black;">
+        <a class="nav-link "onclick="displayUsers()">
+          <i class="bi bi-grid" style="color: black;"></i>
+          <span style="color: black;">Users List</span>
         </a>
       </li><!-- End Dashboard Nav -->
-      <li class="nav-item">
+      <li class="nav-item" style="cursor: pointer;">
         <a class="nav-link " onclick="displayPlaces()">
-          <i class="bi bi-grid"></i>
-          <span>Add Destination</span>
+          <i class="bi bi-grid" style="color: black;"></i>
+          <span style="color: black;">Add Destination</span>
         </a>
       </li><!-- End Dashboard Nav -->
-      <li class="nav-item">
+      <li class="nav-item" style="cursor: pointer;">
         <a class="nav-link " onclick="displayqueries()">
-          <i class="bi bi-grid"></i>
-          <span>Enquiries</span>
+          <i class="bi bi-grid" style="color: black;"></i>
+          <span style="color: black;">Enquiries</span>
         </a>
       </li><!-- End Dashboard Nav -->
 

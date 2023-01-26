@@ -4,7 +4,7 @@ window.onload=function(){
         document.getElementById("intro2").className="nav-item";
         document.getElementById("intro3").className="nav-item";
         var ans=JSON.parse(window.localStorage.getItem("k"));
-        if(ans.email=="sangatirohith@gmail.com"){
+        if(ans.email=="tripBossAdmin@gmail.com"){
             document.getElementById("admin").style.display="block";
         }
         document.getElementById("introuser").innerHTML="Hello "+ans.fname+"!";
