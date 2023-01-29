@@ -38,10 +38,10 @@ window.onload=function(){
             subject:"Shipping helps ensure that the benefits of trade and commerce are more evenly spread. No country is entirely self-sufficient, and every country relies on maritime trade to sell what it has and buy what it needs."
         },
     ]
-    var xhttp=new XMLHttpRequest();
-    xhttp.open('POST','http://localhost:5501/services')
-    xhttp.setRequestHeader('content-type','application/json')
-    xhttp.send(JSON.stringify(servicesarr));
+    // var xhttp=new XMLHttpRequest();
+    // xhttp.open('POST','http://localhost:5501/services')
+    // xhttp.setRequestHeader('content-type','application/json')
+    // xhttp.send(JSON.stringify(servicesarr));
     // xhttp.onload=()=>{
     //     alert(100);
     // }

@@ -24,9 +24,7 @@ placeRoute.post("/",(req,res)=>{
         });
         
     })
-
     res.send("Successfully Added user..");
-
 })
 
 

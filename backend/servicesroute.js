@@ -2,10 +2,10 @@ serviceRoute=require('express')();
 
 serviceRoute.post('/',(req,res)=>{
     var fs=require('fs');
-    res.send(100);
     fs.writeFile('files/services.json',JSON.stringify(req.body),err=>{
       res.send({status:'200'})  
     })
+    res.send(100);
     
 })
 

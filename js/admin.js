@@ -13,22 +13,39 @@ window.onload=function(){
         // }
     // } 
 
-    var xhttp=new XMLHttpRequest();
-    xhttp.open("GET","http://localhost:5501/queries")
-    xhttp.send()
-    xhttp.onload=()=>{
-        var obj=JSON.parse(xhttp.responseText);
-        document.getElementById("countOfQuiries").innerHTML=obj.length;
-        for(x in obj){
-            var ele=document.getElementById("enquiries");
-            var appEle=document.createElement("tr");
-            appEle.innerHTML="<td></td><td></td><td></td>";
-            appEle.childNodes[0].innerHTML=obj[x].name;
-            appEle.childNodes[1].innerHTML=obj[x].email;
-            appEle.childNodes[2].innerHTML=obj[x].subject;
-            ele.appendChild(appEle);
-        }
-    }
+
+
+    $(document).ready(function(){
+        $.get("http://localhost:5501/queries",function(data,status){
+            var obj=JSON.parse(data);
+            document.getElementById("countOfQuiries").innerHTML=obj.length;
+            for(x in obj){
+                console.log(obj[x]);
+                var ele=document.getElementById("enquiries");
+                var appEle=document.createElement("tr");
+                appEle.innerHTML="<td></td><td></td><td></td>";
+                appEle.childNodes[0].innerHTML=obj[x].name;
+                appEle.childNodes[1].innerHTML=obj[x].email;
+                appEle.childNodes[2].innerHTML=obj[x].subject;
+                ele.appendChild(appEle);
+    }})})
+
+    // var xhttp=new XMLHttpRequest();
+    // xhttp.open("GET","http://localhost:5501/queries")
+    // xhttp.send()
+    // xhttp.onload=()=>{
+    //     var obj=JSON.parse(xhttp.responseText);
+    //     document.getElementById("countOfQuiries").innerHTML=obj.length;
+    //     for(x in obj){
+    //         var ele=document.getElementById("enquiries");
+    //         var appEle=document.createElement("tr");
+    //         appEle.innerHTML="<td></td><td></td><td></td>";
+    //         appEle.childNodes[0].innerHTML=obj[x].name;
+    //         appEle.childNodes[1].innerHTML=obj[x].email;
+    //         appEle.childNodes[2].innerHTML=obj[x].subject;
+    //         ele.appendChild(appEle);
+    //     }
+    // }
 
 
 
@@ -37,6 +54,8 @@ window.onload=function(){
         document.getElementById("countOfPlaces").innerHTML=obj1.length+8;
     } 
     var t=0;
+    
+
     
     var req=new XMLHttpRequest();
     req.open("GET","https://reqres.in/api/users?page=2");
@@ -74,7 +93,8 @@ window.onload=function(){
 
 function addcard(){
     var obj={
-        url:document.getElementById("addCardImUrl").value,
+        
+        url:$("#addCardImUrl").value,
         name:document.getElementById("addCardName").value,
         about:document.getElementById("addCardAbout").value
     }
@@ -88,13 +108,17 @@ function addcard(){
     // localStorage.setItem("cardData",JSON.stringify(obj1));
 
     
-    var xhttp=new XMLHttpRequest();
-    xhttp.open("POST",'http://127.0.0.1:5501/places');
-    xhttp.setRequestHeader('Content-type', 'application/json');
-    xhttp.send(JSON.stringify(obj));
-    xhttp.onload=()=>{
-        alert(xhttp.responseText);
-    }
+    // var xhttp=new XMLHttpRequest();
+    // xhttp.open("POST",'http://127.0.0.1:5501/places');
+    // xhttp.setRequestHeader('Content-type', 'application/json');
+    // xhttp.send(JSON.stringify(obj));
+    // xhttp.onload=()=>{
+    //     alert(xhttp.responseText);
+    // }
+
+    $.post("http://127.0.0.1:5501/places",obj,function(xhr,status,responseText){
+        alert(responseText);
+    })
     // window.location.href="blog.html";
 }
 
